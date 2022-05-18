@@ -1,0 +1,30 @@
+.menu__list {
+    display: flex;
+    gap: 56px;
+}
+.menu__item {
+    display: inline;
+}
+.menu__link {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+.menu__link:hover {
+    color: #7A66CC;
+}
+.mobile-menu {
+    margin-top: 20px;
+    display: none;
+    position: relative;
+
+}
+.mobile-menu.active {
+    display: block;
+}
+
+.mobile-menu__list {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}

@@ -1,0 +1,156 @@
+.events {
+    color: #fff;
+}
+.events__container {
+    max-width: 1270px;
+    padding: 0 15px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.events__frame {
+    width: 1110px;
+    margin: 0 10px;
+    overflow: hidden;
+}
+.events__tape {
+    display: flex;
+    transition: transform 400ms ease;
+    position: relative;
+}
+.events__item {
+    height: 473px;
+    min-height: 429.33px;
+    background-color: #2F2B2B;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 350px;
+}
+.events__item:not(:last-child) {
+    margin-right: 30px;
+}
+.events__img {
+    width: 100%;
+}
+.event__info {
+    flex-grow: 1;
+    padding-top: 1.875em;
+    display: flex;
+    flex-direction: column;
+}
+.event__info h3, h4 {
+    padding-left: 1.944em;
+}
+.events__city {
+    opacity: 0.5;
+    font-size: 18px;
+    font-weight: bold;
+}
+.events__place {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 20px 0 30px;
+}
+.events__tickets {
+    display: flex;
+    min-height: 50px;
+    max-height: 60px;
+    flex-grow: 1;
+}
+.events__date {
+    opacity: 0.5;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: auto;
+}
+.events__ticket-btn {
+    color: inherit;    
+    background-color: #7A66CC;
+    width: 51.42857142857143%;
+    height: 100%;
+    display: flex;
+}
+.events__ticket-text {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: auto;
+}
+.events__btn {
+    border: none;
+    background-color: unset;
+    padding: 0px;
+    cursor: pointer;
+}
+.events__btn:active {
+    transform: scale(0.98);
+}
+
+@media (max-width: 1241px) {
+    .events__frame {
+        width: 730px;
+    }
+}
+
+@media (max-width: 900px) {
+    .events__frame {
+        width: 644px;
+    }
+    .events__item {
+        flex: 0 0 307px;
+    }
+    .event__info {
+        justify-content: flex-end;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 800px) {
+    .events__frame {
+        width: 307px;   
+    }
+    .events__tape {
+        max-width: 307px;
+    }
+}
+
+@media (max-width: 445px) {
+    .events__btn img {
+        width: 30px;
+    }
+    .events__btn:active {
+        transform: unset;
+    }
+}
+
+@media (max-width: 425px) {
+    .events__container {
+        justify-content: center;
+    }
+    .events__btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+    }
+    .events__btn-left {
+        left: 15px;
+    }
+    .events__btn-right {
+        right: 15px;
+    }    
+}
+
+@media (max-width: 370px) {
+    .events__frame {
+        width: 290px;
+        margin: 0 0px;
+    }
+    .events__item {
+        flex: 0 0 290px;
+    }
+    .event__info h3, h4 {
+        padding-left: 1.45em;
+    }
+}

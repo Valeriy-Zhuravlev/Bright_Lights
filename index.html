@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Lights</title>
+    <link rel="icon" href="img/favicon/favicon-32x32.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <header class="home">
+        <div class="home__container container">
+            <div class="nav-container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <img src="img/home/logo.png" alt="" class="logo__img">
+                    </div>
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item"><a class="menu__link" href="#about">About</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#news">News</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#music">Music</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#media">Media</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#tours">Tours</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#contacts">Contacts</a></li>
+                        </ul>
+                    </nav>
+                    <!-- mobile nav btn -->
+                    <div class="burger__wrapper">
+                        <button class="burger" type="button"><span class="burger__icon"></span></button>
+                    </div>                    
+                </div> <!-- /nav-wrapper -->
+                <nav class="mobile-menu menu">
+                    <ul class="mobile-menu__list menu__list">
+                        <li class="mobile-menu__item menu__item"><a class="mobile-menu__link menu__link" href="">About</a></li>
+                        <li class="mobile-menu__item menu__item"><a class="mobile-menu__link menu__link" href="">News</a></li>
+                        <li class="mobile-menu__item menu__item"><a class="mobile-menu__link menu__link" href="">Music</a></li>
+                        <li class="mobile-menu__item menu__item"><a class="mobile-menu__link menu__link" href="">Media</a></li>
+                        <li class="mobile-menu__item menu__item"><a class="mobile-menu__link menu__link" href="">Tours</a></li>
+                        <li class="mobile-menu__item menu__item"><a class="mobile-menu__link menu__link" href="">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div> <!-- /nav-container -->
+            <div class="home__main">
+                <h2 class="home__title title">New Single</h2>
+                <h1 class="home__subtitle subtitle">War For Love</h1>
+                <div id="player1">
+                    <div class="audioplayer home__audioplayer">
+                        <button class="audioplayer__play-btn" type="button">
+                            <img id="play-icon" class="audioplayer__play-img" src="img/audioplayer/play-icon.svg" alt="play music">
+                        </button>
+                        <div class="progress-bar">
+                            <span class="progress-bar__slider"></span>
+                            <span class="progress-bar__passed"></span>
+                            <audio class="audio" preload="metadata" src="tracks/Bright_Lights,Kaleena_Zanders,Kandy—War_For_Love.mp3"></audio>
+                        </div>
+                        <div class="audioplayer__timer">
+                            <span id="timer-passed" class="audioplayer__timer-passed">00:00</span>
+                            <span>-</span>
+                            <span id="timer-total" class="audioplayer__timer-total">02:54</span>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+            <section class="news" id="news">
+                <div class="news__container">
+                    <div class="news__item">
+                        <img class="news__img petal-form" src="img/news/news-1.jpg" alt="">
+                        <div class="news__banner petal-form">
+                            <h4 class="news__title">Working on my upcoming full-lenth <br>
+                                album that`s releasing later this year.</h4>
+                        </div>
+                    </div>
+                    <div class="news__item">
+                        <img class="news__img petal-form" src="img/news/news-2.jpg" alt="">
+                        <div class="news__banner petal-form">
+                            <h4 class="news__title">Halloween vibes. <br>
+                                Listen my new track!</h4>
+                        </div>
+                    </div>
+                    <div class="news__item">
+                        <img class="news__img petal-form" src="img/news/news-3.jpg" alt="">
+                        <div class="news__banner petal-form">
+                            <h4 class="news__title">WarForLove is OUT NOW!! <br>
+                                Stream it here!</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </header>
+
+    <section class="about" id="about">
+        <div class="about__container container">
+            <div class="about__wrapper">
+                <div class="about__content">
+                    <h2 class="about__title title">Bright Lights</h2>
+                    <p class="about__text">Bright Lights is a multi-Grammy nominated singer, songwriter, DJ and 
+                        record producer. She has written for numerous pop stars including Britney Spears, Justin Bieber, 
+                        Usher and Beyoncé. Her catalog has amassed over 1 billion streams worldwide. More than 100 million of those 
+                        streams can be attributed to her artist career and include such hits as Porter Robinson's 
+                        "Language," 3LAU's "How You Love Me" and her own single "Runaway." She was also a featured 
+                        vocalist on Zedd's #1 Clarity album. Her latest music video, "Put It Down," reached 1 million 
+                        streams in the first week, releasing independently. Bright Lights is currently in the studio 
+                        working on a self-produced album slated for release in 2020. </p>
+                    <div class="about__info">
+                        <p class="about__info-item">Based in: Los Angeles</p>
+                        <p class="about__info-item">Founded in 2011</p>
+                        <p class="about__info-item">Genre: #DancePop</p>
+                        <p class="about__info-item">Label: 333 Recordings</p>
+                    </div>
+                </div>
+                <img class="about__img" src="img/about/Bright-Lights.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="quote">
+        <div class="quote__container container">
+            <div class="quote__wrapper petal-form">
+                <blockquote class="quote-blockquote" cite="https://www.instagram.com/brightlights333/?hl=ru">
+                    <p class="quote__text text">
+                        <img class="quote-mark" src="img/quote/quote-mark-icon.svg" alt="">
+                        “In an age where mainstream music is designed to be as
+                        easily consumed as possible, listening to Bright Lights is
+                        refreshing, to say the least. Her sound is perfect for radio
+                        but complex enough to separate her from other pop newcomers.”
+                    </p>
+                    <cite class="quote__cite">PopULove.net</cite>
+                </blockquote>
+                <img class="quote__img petal-form" src="img/quote/BrightLight-MTV.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="tracks" id="music">
+        <div class="tracks__container container">
+            <div class="tracks__wrapper">
+                <div class="tracks__img-wrapper">
+                    <img src="img/tracks/Bright-Lights.png" alt="" class="tracks__img">
+                </div>
+                <div class="tracks__content">
+                    <h2 class="tracks__title title">Last tracks</h2>
+                    <div class="tracks__content-wrapper">
+                        <div id="player2">
+                            <div class="audioplayer">
+                                <button class="audioplayer__play-btn" type="button">
+                                    <img class="audioplayer__play-img" src="img/audioplayer/play-icon.svg" alt="play music">
+                                </button>
+                                <div class="progress-bar">
+                                    <span class="progress-bar__slider"></span>
+                                    <span class="progress-bar__passed"></span>
+                                    <audio class="audio" preload="metadata" src="tracks/3LAU,Bright_Lights—How_You_Love_Me.mp3"></audio>
+                                </div>
+                                <div class="audioplayer__timer">
+                                    <span class="audioplayer__timer-passed">00:00</span>
+                                    <span>-</span>
+                                    <span class="audioplayer__timer-total">03:44</span>
+                                </div>
+                            </div>
+                            <div class="playlist">
+                                <p class="playlist__item plays">3LAU, Bright Lights — How You Love Me</p>
+                                <p class="playlist__item">Bright Lights, Kaleena Zanders, Kandy — War For Love</p>
+                                <p class="playlist__item">Pink Is Punk, Benny Benassi, Bright Lights — Ghost</p>
+                                <p class="playlist__item">Hardwell, Dyro, Bright Lights — Never Say Goodbye</p>
+                                <p class="playlist__item">Zeds Dead, Dirtyphonics, Bright Lights — Where Are You Now</p>
+                                <p class="playlist__item">Zedd, Bright Lights — Follow You Down</p>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="music-services">
+                        <span class="music-services__text">Follow me:</span>
+                        <a class="music-services__link music-services__link_spotify" target="_blank" href="https://open.spotify.com/artist/2AoeqcUs8DySgZRJ9yV4Ou">Spotify</a>
+                        <a class="music-services__link music-services__link_itunes" target="_blank" href="https://www.apple.com/ru/search/Bright-Lights?src=globalnav">iTunes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery" id="media">
+        <div class="gallery__container container">
+            <div class="gallery__wrapper">
+                
+                <div class="gallery__item gallery__item-1">
+                    <div class="gallery__banner petal-form">
+                        <div class="gallery__banner-text">Event 1</div>
+                    </div>
+                    <img class="gallery__img gallery__img-1 petal-form" src="img/gallery/gallery-1.jpg" alt="">
+                </div>
+                <div class="gallery__item gallery__item-2">
+                    <div class="gallery__banner petal-form">
+                        <div class="gallery__banner-text">Event 2</div>
+                    </div>
+                    <img class="gallery__img gallery__img-2 petal-form" src="img/gallery/gallery-2.jpg" alt="">
+                </div>
+                <div class="gallery__item gallery__item-3">
+                    <div class="gallery__banner petal-form">
+                        <div class="gallery__banner-text">Event 3</div>
+                    </div>
+                    <img class="gallery__img gallery__img-3 petal-form" src="img/gallery/gallery-3.jpg" alt="">
+                </div>
+                <div class="gallery__item gallery__item-4">
+                    <div class="gallery__banner petal-form">
+                        <div class="gallery__banner-text">Event 4</div>
+                    </div>
+                    <img class="gallery__img gallery__img-4 petal-form" src="img/gallery/gallery-4.jpg" alt="">
+                </div>
+                <div class="gallery__item gallery__item-5">
+                    <div class="gallery__banner petal-form">
+                        <div class="gallery__banner-text">EDC Las Vegas Mainstage</div>
+                    </div>
+                    <img class="gallery__img gallery__img-5 petal-form" src="img/gallery/gallery-5.jpg" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="events" id="tours">
+        <div class="events__container container">
+            <button id="events__btn-prev" class="events__btn-left events__btn" type="button">
+                <img src="img/events/arrow-left.svg" alt="left arrow">
+            </button>
+            <div class="events__frame">
+                <div class="events__tape">               
+                    <div class="events__item petal-form">
+                        <img class="events__img petal-form" src="img/events/event-1.jpg" alt="">
+                        <div class="event__info">
+                            <h3 class="events__city">Chandler, AZ</h3>
+                            <h4 class="events__place">The Park at Wild Horse Pass</h4>
+                            <div class="events__tickets">
+                                <time class="events__date" datetime="2021-04-02">Apr 02 2021</time>
+                                <button class="events__ticket-btn petal-form"><span class="events__ticket-text">tickets</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="events__item petal-form">
+                        <img class="events__img petal-form" src="img/events/event-2.jpg" alt="">
+                        <div class="event__info">
+                            <h3 class="events__city">Ibiza, IBZ</h3>
+                            <h4 class="events__place">Swag Ibiza Club</h4>
+                            <div class="events__tickets">
+                                <time class="events__date" datetime="2021-07-08">Jul 08 2021</time>
+                                <button class="events__ticket-btn petal-form"><span class="events__ticket-text">tickets</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="events__item petal-form">
+                        <img class="events__img petal-form" src="img/events/event-3.jpg" alt="">
+                        <div class="event__info">
+                            <h3 class="events__city">Ibiza, IBZ</h3>
+                            <h4 class="events__place">El Swing Ibiza</h4>
+                            <div class="events__tickets">
+                                <time class="events__date" datetime="2021-07-10">Jul 10 2021</time>
+                                <button class="events__ticket-btn petal-form"><span class="events__ticket-text">tickets</span></button>
+                            </div>
+                        </div>                       
+                    </div>
+                    <div class="events__item petal-form">
+                        <img class="events__img petal-form" src="img/events/event-1.jpg" alt="">
+                        <div class="event__info">
+                            <h3 class="events__city">Chandler, AZ</h3>
+                            <h4 class="events__place">The Park at Wild Horse Pass</h4>
+                            <div class="events__tickets">
+                                <time class="events__date" datetime="2021-04-02">Apr 02 2021</time>
+                                <button class="events__ticket-btn petal-form"><span class="events__ticket-text">tickets</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="events__item petal-form">
+                        <img class="events__img petal-form" src="img/events/event-3.jpg" alt="">
+                        <div class="event__info">
+                            <h3 class="events__city">Ibiza, IBZ</h3>
+                            <h4 class="events__place">El Swing Ibiza</h4>
+                            <div class="events__tickets">
+                                <time class="events__date" datetime="2021-07-10">Jul 10 2021</time>
+                                <button class="events__ticket-btn petal-form"><span class="events__ticket-text">tickets</span></button>
+                            </div>
+                        </div>                       
+                    </div>
+                </div> <!-- /events__tape -->
+            </div>            
+            <button id="events__btn-next" class="events__btn-right events__btn" type="button">
+                <img src="img/events/arrow-right.svg" alt="right arrow">
+            </button>
+        </div>
+    </section>
+
+    <footer class="footer" id="contacts">
+        <div class="footer__container container">
+            <div class="footer__logo logo">
+                <img src="img/home/logo.png" alt="" class="footer__logo-img logo__img">
+            </div>
+            <div class="footer__contact">
+                <div class="footer__contact-item footer__contact-item-th">Artist Management:</div>
+                <div class="footer__contact-item">Jake Henny</div>
+                <div class="footer__contact-item footer__contact-item-th">EMAIL:</div>
+                <div class="footer__contact-item"><a href="mailto:jake@brightlightsofficial.com">jake@brightlightsofficial.com</a></div>
+            </div>
+            <div class="social">
+                <a class="social__link" target="_blank" href="https://www.apple.com/ru/search/Bright-Lights?src=globalnav"><img class="social__icon" src="img/footer/apple-logo.svg" alt="iTunes link"></a>
+                <a class="social__link" target="_blank" href="https://open.spotify.com/artist/2AoeqcUs8DySgZRJ9yV4Ou"><img class="social__icon" src="img/footer/spotify-logo.svg" alt="spotify link"></a>
+                <a class="social__link" target="_blank" href="https://www.instagram.com/brightlights333/?hl=ru"><img class="social__icon" src="img/footer/instagram-logo.svg" alt="instagram link"></a>
+                <a class="social__link" target="_blank" href="https://www.youtube.com/channel/UCxnI8lEwjVHYFtq7vtMZUJA"><img class="social__icon" src="img/footer/youtube-logo.svg" alt="youtube link"></a>
+                <a class="social__link" target="_blank" href="https://twitter.com/brightlights333?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img class="social__icon" src="img/footer/twitter-logo.svg" alt="twitter link"></a>
+                <a class="social__link" target="_blank" href="https://www.facebook.com/brightlights333"><img class="social__icon" src="img/footer/facebook-logo.svg" alt="facebook link"></a>
+            </div>
+            <p class="copyright">©  2020 DJ bright lights.</p>
+        </div>        
+    </footer>
+    
+    <script src="app/app.js" type="module"></script>
+    <script src="app/burger.js"></script>
+    <script src="app/audioplayer.js" type="module"></script>
+    <script src="app/carousel.js"></script>
+</body>
+</html>

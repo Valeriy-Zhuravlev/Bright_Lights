@@ -1,0 +1,75 @@
+.quote__container {
+    height: 399px;
+}
+.quote__wrapper {
+    border: 1px solid #fff;
+    max-height: 313px;
+    padding: 50px 0px 127px 80px;
+    position: relative;
+}
+.quote-blockquote {
+    max-width: 520px;
+}
+.quote__text {
+    color: #fff;
+    font-size: 18px;
+    position: relative;
+    margin-bottom: 25px;
+}
+.quote__text::after {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid #a4a4a6;
+    padding-top: 25px;
+}
+.quote-mark {
+    position: absolute;
+}
+.quote__cite {
+    color: #7A66CC;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+}
+.quote__img {
+    max-width: 390px;
+    position: absolute;
+    right: 80px;
+    top: -85px;
+}
+
+@media (max-width: 1140px) {
+    .quote__container {
+        height: unset;
+    }
+    .quote__wrapper {
+        max-height: unset;
+        padding: 50px 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .quote__img {
+        position: unset;
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .quote__wrapper {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .quote__img {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .quote__wrapper {
+        padding: 30px 40px;
+    }
+    .quote__text {
+        font-size: 16px;
+    }
+}
