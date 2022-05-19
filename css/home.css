@@ -1,9 +1,22 @@
-.home {
+.no-webplossy .home {
     background: url(../img/home/home-bg.jpg);
-    background-position: center; 
-    background-repeat: no-repeat;
-    background-position-y: top;
 }
+.no-avif .home {
+    background: url(../img/home/home-bg.jpg);
+}
+.webplossy .home {
+    background: url(../img/home/home-bg.webp);
+}
+.avif .home {
+    background: url(../img/home/home-bg.avif);
+}
+.home {
+    background-position: center !important; 
+    background-repeat: no-repeat !important;
+    background-position-y: top !important;
+}
+	
+
 .nav-container {
     padding: 30px 95px 322px;
     position: relative;

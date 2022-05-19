@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-webplossy no-avif">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bright Lights</title>
     <link rel="icon" href="img/favicon/favicon-32x32.ico" type="image/x-icon">
+    <script src="app/checkImageFormatSupport.js"></script>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -67,21 +68,33 @@
             <section class="news" id="news">
                 <div class="news__container">
                     <div class="news__item">
-                        <img class="news__img petal-form" src="img/news/news-1.jpg" alt="">
+                        <picture>
+                            <source srcset="img/news/news-1.avif" type="image/avif">
+                            <source srcset="img/news/news-1.webp" type="image/webp">
+                            <img class="news__img petal-form" src="img/news/news-1.jpg" alt="">
+                        </picture>
                         <div class="news__banner petal-form">
                             <h4 class="news__title">Working on my upcoming full-lenth <br>
                                 album that`s releasing later this year.</h4>
                         </div>
                     </div>
                     <div class="news__item">
-                        <img class="news__img petal-form" src="img/news/news-2.jpg" alt="">
+                        <picture>
+                            <source srcset="img/news/news-2.avif" type="image/avif">
+                            <source srcset="img/news/news-2.webp" type="image/webp">
+                            <img class="news__img petal-form" src="img/news/news-2.jpg" alt="">
+                        </picture>
                         <div class="news__banner petal-form">
                             <h4 class="news__title">Halloween vibes. <br>
                                 Listen my new track!</h4>
                         </div>
                     </div>
                     <div class="news__item">
-                        <img class="news__img petal-form" src="img/news/news-3.jpg" alt="">
+                        <picture>
+                            <source srcset="img/news/news-3.avif" type="image/avif">
+                            <source srcset="img/news/news-3.webp" type="image/webp">
+                            <img class="news__img petal-form" src="img/news/news-3.jpg" alt="">
+                        </picture>
                         <div class="news__banner petal-form">
                             <h4 class="news__title">WarForLove is OUT NOW!! <br>
                                 Stream it here!</h4>
@@ -112,7 +125,11 @@
                         <p class="about__info-item">Label: 333 Recordings</p>
                     </div>
                 </div>
-                <img class="about__img" src="img/about/Bright-Lights.png" alt="">
+                <picture>
+                    <source srcset="img/about/Bright-Lights.avif" type="image/avif">
+                    <source srcset="img/about/Bright-Lights.webp" type="image/webp">
+                    <img class="about__img" src="img/about/Bright-Lights.png" alt="">
+                </picture>
             </div>
         </div>
     </section>
@@ -130,7 +147,12 @@
                     </p>
                     <cite class="quote__cite">PopULove.net</cite>
                 </blockquote>
-                <img class="quote__img petal-form" src="img/quote/BrightLight-MTV.jpg" alt="">
+                <!-- <img  src="img/quote/BrightLight-MTV.jpg" alt=""> -->
+                <picture>
+                    <source srcset="img/quote/BrightLight-MTV.avif" type="image/avif">
+                    <source srcset="img/quote/BrightLight-MTV.webp" type="image/webp">
+                    <img class="quote__img petal-form" src="img/quote/BrightLight-MTV.jpg" alt="">
+                </picture>
             </div>
         </div>
     </section>
@@ -139,7 +161,11 @@
         <div class="tracks__container container">
             <div class="tracks__wrapper">
                 <div class="tracks__img-wrapper">
-                    <img src="img/tracks/Bright-Lights.png" alt="" class="tracks__img">
+                    <picture>
+                        <source srcset="img/tracks/Bright-Lights.avif" type="image/avif">
+                        <source srcset="img/tracks/Bright-Lights.webp" type="image/webp">
+                        <img class="tracks__img" src="img/tracks/Bright-Lights.png" alt="">
+                    </picture>
                 </div>
                 <div class="tracks__content">
                     <h2 class="tracks__title title">Last tracks</h2>
@@ -188,31 +214,51 @@
                     <div class="gallery__banner petal-form">
                         <div class="gallery__banner-text">Event 1</div>
                     </div>
-                    <img class="gallery__img gallery__img-1 petal-form" src="img/gallery/gallery-1.jpg" alt="">
+                    <picture>
+                        <source srcset="img/gallery/gallery-1.avif" type="image/avif">
+                        <source srcset="img/gallery/gallery-1.webp" type="image/webp">
+                        <img class="gallery__img gallery__img-1 petal-form" src="img/gallery/gallery-1.jpg" alt="">
+                    </picture>
                 </div>
                 <div class="gallery__item gallery__item-2">
                     <div class="gallery__banner petal-form">
                         <div class="gallery__banner-text">Event 2</div>
                     </div>
-                    <img class="gallery__img gallery__img-2 petal-form" src="img/gallery/gallery-2.jpg" alt="">
+                    <picture>
+                        <source srcset="img/gallery/gallery-2.avif" type="image/avif">
+                        <source srcset="img/gallery/gallery-2.webp" type="image/webp">
+                        <img class="gallery__img gallery__img-2 petal-form" src="img/gallery/gallery-2.jpg" alt="">
+                    </picture>
                 </div>
                 <div class="gallery__item gallery__item-3">
                     <div class="gallery__banner petal-form">
                         <div class="gallery__banner-text">Event 3</div>
                     </div>
-                    <img class="gallery__img gallery__img-3 petal-form" src="img/gallery/gallery-3.jpg" alt="">
+                    <picture>
+                        <source srcset="img/gallery/gallery-3.avif" type="image/avif">
+                        <source srcset="img/gallery/gallery-3.webp" type="image/webp">
+                        <img class="gallery__img gallery__img-3 petal-form" src="img/gallery/gallery-3.jpg" alt="">
+                    </picture>
                 </div>
                 <div class="gallery__item gallery__item-4">
                     <div class="gallery__banner petal-form">
                         <div class="gallery__banner-text">Event 4</div>
                     </div>
-                    <img class="gallery__img gallery__img-4 petal-form" src="img/gallery/gallery-4.jpg" alt="">
+                    <picture>
+                        <source srcset="img/gallery/gallery-4.avif" type="image/avif">
+                        <source srcset="img/gallery/gallery-4.webp" type="image/webp">
+                        <img class="gallery__img gallery__img-4 petal-form" src="img/gallery/gallery-4.jpg" alt="">
+                    </picture>
                 </div>
                 <div class="gallery__item gallery__item-5">
                     <div class="gallery__banner petal-form">
                         <div class="gallery__banner-text">EDC Las Vegas Mainstage</div>
                     </div>
-                    <img class="gallery__img gallery__img-5 petal-form" src="img/gallery/gallery-5.jpg" alt="">
+                    <picture>
+                        <source srcset="img/gallery/gallery-5.avif" type="image/avif">
+                        <source srcset="img/gallery/gallery-5.webp" type="image/webp">
+                        <img class="gallery__img gallery__img-5 petal-form" src="img/gallery/gallery-5.jpg" alt="">
+                    </picture>
                 </div>
 
             </div>
@@ -227,7 +273,11 @@
             <div class="events__frame">
                 <div class="events__tape">               
                     <div class="events__item petal-form">
-                        <img class="events__img petal-form" src="img/events/event-1.jpg" alt="">
+                        <picture>
+                            <source srcset="img/events/event-1.avif" type="image/avif">
+                            <source srcset="img/events/event-1.webp" type="image/webp">
+                            <img class="events__img petal-form" src="img/events/event-1.jpg" alt="">
+                        </picture>
                         <div class="event__info">
                             <h3 class="events__city">Chandler, AZ</h3>
                             <h4 class="events__place">The Park at Wild Horse Pass</h4>
@@ -238,7 +288,11 @@
                         </div>
                     </div>
                     <div class="events__item petal-form">
-                        <img class="events__img petal-form" src="img/events/event-2.jpg" alt="">
+                        <picture>
+                            <source srcset="img/events/event-2.avif" type="image/avif">
+                            <source srcset="img/events/event-2.webp" type="image/webp">
+                            <img class="events__img petal-form" src="img/events/event-2.jpg" alt="">
+                        </picture>
                         <div class="event__info">
                             <h3 class="events__city">Ibiza, IBZ</h3>
                             <h4 class="events__place">Swag Ibiza Club</h4>
@@ -249,7 +303,11 @@
                         </div>
                     </div>
                     <div class="events__item petal-form">
-                        <img class="events__img petal-form" src="img/events/event-3.jpg" alt="">
+                        <picture>
+                            <source srcset="img/events/event-3.avif" type="image/avif">
+                            <source srcset="img/events/event-3.webp" type="image/webp">
+                            <img class="events__img petal-form" src="img/events/event-3.jpg" alt="">
+                        </picture>
                         <div class="event__info">
                             <h3 class="events__city">Ibiza, IBZ</h3>
                             <h4 class="events__place">El Swing Ibiza</h4>
@@ -260,7 +318,11 @@
                         </div>                       
                     </div>
                     <div class="events__item petal-form">
-                        <img class="events__img petal-form" src="img/events/event-1.jpg" alt="">
+                        <picture>
+                            <source srcset="img/events/event-1.avif" type="image/avif">
+                            <source srcset="img/events/event-1.webp" type="image/webp">
+                            <img class="events__img petal-form" src="img/events/event-1.jpg" alt="">
+                        </picture>
                         <div class="event__info">
                             <h3 class="events__city">Chandler, AZ</h3>
                             <h4 class="events__place">The Park at Wild Horse Pass</h4>
@@ -271,7 +333,11 @@
                         </div>
                     </div>
                     <div class="events__item petal-form">
-                        <img class="events__img petal-form" src="img/events/event-3.jpg" alt="">
+                        <picture>
+                            <source srcset="img/events/event-3.avif" type="image/avif">
+                            <source srcset="img/events/event-3.webp" type="image/webp">
+                            <img class="events__img petal-form" src="img/events/event-3.jpg" alt="">
+                        </picture>
                         <div class="event__info">
                             <h3 class="events__city">Ibiza, IBZ</h3>
                             <h4 class="events__place">El Swing Ibiza</h4>
