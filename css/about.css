@@ -77,8 +77,14 @@
 }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 410px) {
     .about__title::before {
-        padding-right: 3px;
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .about__title::before {
+        display: none;
     }
 }

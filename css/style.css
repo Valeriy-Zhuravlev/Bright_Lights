@@ -57,6 +57,11 @@ button {
     font-size: 48px;
     font-weight: bold;
 }
+@media (max-width: 500px) {
+    .title {
+        font-size: 38px;
+    }
+}
 
 .text {
     color: rgb(186, 186, 188);

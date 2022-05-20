@@ -139,6 +139,12 @@
     }
 }
 
+@media (max-width: 410px) {
+    .tracks__title::before {
+        padding-right: 10px;
+    }
+}
+
 @media (max-width: 373px) {
     .music-services {
         display: block;
@@ -151,5 +157,11 @@
 @media (max-width: 363px) {
     .progress-bar {
         width: 158px;
+    }
+}
+
+@media (max-width: 350px) {
+    .tracks__title::before {
+        padding-right: 3px;
     }
 }
