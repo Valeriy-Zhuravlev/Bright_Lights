@@ -35,7 +35,7 @@ audioplayer2.playBtn.addEventListener('pointerdown', function(event) {
  
 });
 
-audioplayer2.playlist.addEventListener('pointerdown', function(event) {
+audioplayer2.playlist.addEventListener('click', function(event) {
     if (event.target.closest('.playlist__item')) {
         audioplayer2.markTrack(event.target);
     }
