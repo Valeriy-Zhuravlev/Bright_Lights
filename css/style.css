@@ -29,6 +29,10 @@ a {
   
 /* Base ----------------------------------------------------- */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     background-color: rgb(28, 27, 33);
@@ -701,6 +705,12 @@ button {
     }
 }
 
+@media (max-width: 550px) {
+    .tracks__img {
+        max-width: 350px;
+    }
+}
+
 @media (max-width: 500px) {    
     .audioplayer {
         justify-content: unset;
@@ -801,6 +811,7 @@ button {
     color: #7A66CC;
     font-size: 24px;
     font-weight: 700;
+    text-align: center;
 }
 .gallery__item-1 {
     grid-row: span 2;
@@ -819,12 +830,25 @@ button {
 }
 
 @media (max-width: 1160px) {
+    .gallery__wrapper {
+        grid-template-columns: repeat(2, 255px);
+    }
     .gallery__item-1 {
         grid-row: 2/span 2;
     }
 }
 
+@media (max-width: 760px) {
+    .gallery__banner {
+        height: 100%;
+        background-color: rgba(28, 27, 33, 0.6);
+    }
+}
+
 @media (max-width: 569px) {
+    .gallery__wrapper {
+        grid-template-columns: 225px;
+    }
     .gallery__item-5 {
         grid-column: unset;
         max-width: 255px;
@@ -873,6 +897,9 @@ button {
 }
 .events__item:not(:last-child) {
     margin-right: 30px;
+}
+.events__img-wrapper {
+    height: 59%;
 }
 .events__img {
     width: 100%;
@@ -928,9 +955,9 @@ button {
     padding: 0px;
     cursor: pointer;
 }
-.events__btn:active {
+/* .events__btn:active {
     transform: scale(0.98);
-}
+} */
 
 @media (max-width: 1241px) {
     .events__frame {
@@ -975,9 +1002,8 @@ button {
     }
     .events__btn {
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
         z-index: 10;
+        height: 100%;
     }
     .events__btn-left {
         left: 15px;

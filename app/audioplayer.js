@@ -13,7 +13,7 @@ export default class Audioplayer {
     constructor(playerNode) {
         this.player = playerNode;
 
-        this.playBtn = this.player.querySelector('.audioplayer__play');
+        this.playBtn = this.player.querySelector('.audioplayer__play-btn');
         this.playImg = this.player.querySelector('.audioplayer__play-img');
 
         this.progressBar = this.player.querySelector('.progress-bar');
@@ -124,16 +124,17 @@ export default class Audioplayer {
         });
     }
 
-    mouseDown(event) {
+    pointerDown(event) {
         event.preventDefault();
         
         const shiftX = event.clientX - this.slider.getBoundingClientRect().left;
     
-        const mouseMoveBinded = mouseMove.bind(this);
-        document.addEventListener('mousemove', mouseMoveBinded);
-        document.addEventListener('mouseup', mouseUp.bind(this));
+        // event.target.setPointerCapture(event.pointerId);
+        const pointerMoveBinded = pointerMove.bind(this);
+        document.addEventListener('pointermove', pointerMoveBinded);
+        document.addEventListener('pointerup', pointerUp.bind(this));
 
-        function mouseMove(event) {
+        function pointerMove(event) {
             setPause.call(this);
     
             let currentLeft = event.clientX - shiftX - this.progressBar.getBoundingClientRect().left;
@@ -160,9 +161,9 @@ export default class Audioplayer {
             this.timeUpdate();
         }
     
-        function mouseUp() {
-            document.removeEventListener('mousemove', mouseMoveBinded);
-            document.removeEventListener('mouseup', mouseUp);
+        function pointerUp() {
+            document.removeEventListener('pointermove', pointerMoveBinded);
+            document.removeEventListener('pointerup', pointerUp);
             setPlay.call(this);
         }
 
@@ -205,7 +206,7 @@ export default class Audioplayer {
         this.audio.currentTime = currentLeft / (this.progressBar.offsetWidth / this.audio.duration);
 
         this.timeUpdate();
-        this.mouseDown(event);
+        this.pointerDown(event);
     }
 
 };
