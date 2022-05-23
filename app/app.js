@@ -11,7 +11,6 @@ audioplayer1.playBtn.addEventListener('pointerdown', function(event) {
     audioplayer1.playBtn.onpointerup = () => {
         audioplayer1.clickPlayBtn();
     };
- 
 });
 
 audioplayer1.player.addEventListener('pointerdown', function(event) {
@@ -32,7 +31,6 @@ audioplayer2.playBtn.addEventListener('pointerdown', function(event) {
     audioplayer2.playBtn.onpointerup = () => {
         audioplayer2.clickPlayBtn();
     }   
- 
 });
 
 audioplayer2.playlist.addEventListener('click', function(event) {
@@ -42,12 +40,11 @@ audioplayer2.playlist.addEventListener('click', function(event) {
 });
 
 audioplayer2.player.addEventListener('pointerdown', function(event) {
-
+    
     if (event.target.closest('.progress-bar')) {
         audioplayer2.clickProgressBar(event);
     }
     if (event.target.closest('.progress-bar__slider')) {
         audioplayer2.pointerDown(event);
     }   
-
 });

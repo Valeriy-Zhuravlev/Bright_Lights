@@ -186,6 +186,7 @@ button {
     height: 2px;
     background-color: #fff;
     position: relative;
+    touch-action: none;
 }
 .progress-bar::before {
     content: "";

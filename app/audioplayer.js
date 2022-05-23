@@ -63,7 +63,7 @@ export default class Audioplayer {
             this.timerTotal.innerText = `${totalMin}:${totalSec}`;
     }
       
-    timeUpdate() {        
+    timeUpdate() {
         const currentTime = new Date(this.audio.currentTime * 1000);
         let currentMin = currentTime.getMinutes();
         let currentSec = currentTime.getSeconds();
@@ -81,13 +81,11 @@ export default class Audioplayer {
     }
 
     setCurrentSliderPosition() {
-
         const step = this.progressBar.offsetWidth / this.audio.duration;
         const progressPosition = step * this.audio.currentTime;
 
         this.slider.style.left = progressPosition + 'px';
         this.progress.style.width = progressPosition + 'px';
-
     }
 
     markTrack(track) {
@@ -121,49 +119,54 @@ export default class Audioplayer {
 
         this.audio.addEventListener('loadedmetadata', () => {
             this.getTotalTime();
+            this.timeUpdate();
         });
+    }
+
+    setCurrentSliderAndProgress(currentLeft) {
+        if (currentLeft < 0) {
+            currentLeft = 0;
+        }
+
+        const rightEdge = this.progressBar.offsetWidth - this.slider.offsetWidth;
+
+        if (currentLeft > rightEdge) {
+            currentLeft = rightEdge;
+        }
+
+        this.slider.style.left = currentLeft + 'px';    
+        this.progress.style.width = currentLeft + 'px';
+
+        if (currentLeft == rightEdge) {
+            this.progress.style.width = currentLeft + this.slider.offsetWidth + 'px';
+        }
+
+        this.audio.currentTime = currentLeft / (this.progressBar.offsetWidth / this.audio.duration);
     }
 
     pointerDown(event) {
         event.preventDefault();
         
         const shiftX = event.clientX - this.slider.getBoundingClientRect().left;
-    
-        // event.target.setPointerCapture(event.pointerId);
+
         const pointerMoveBinded = pointerMove.bind(this);
+        const pointerUpBinded = pointerUp.bind(this);
         document.addEventListener('pointermove', pointerMoveBinded);
-        document.addEventListener('pointerup', pointerUp.bind(this));
+        document.addEventListener('pointerup', pointerUpBinded);
+
 
         function pointerMove(event) {
             setPause.call(this);
     
             let currentLeft = event.clientX - shiftX - this.progressBar.getBoundingClientRect().left;
-    
-            if (currentLeft < 0) {
-                currentLeft = 0;
-            }
-    
-            const rightEdge = this.progressBar.offsetWidth - this.slider.offsetWidth;
-    
-            if (currentLeft > rightEdge) {
-                currentLeft = rightEdge;
-            }
-    
-            this.slider.style.left = currentLeft + 'px';    
-            this.progress.style.width = currentLeft + 'px';
-    
-            if (currentLeft == rightEdge) {
-                this.progress.style.width = currentLeft + this.slider.offsetWidth + 'px';
-            }
-    
-            this.audio.currentTime = currentLeft / (this.progressBar.offsetWidth / this.audio.duration);
-
+            
+            this.setCurrentSliderAndProgress(currentLeft);
             this.timeUpdate();
         }
     
         function pointerUp() {
             document.removeEventListener('pointermove', pointerMoveBinded);
-            document.removeEventListener('pointerup', pointerUp);
+            document.removeEventListener('pointerup', pointerUpBinded);
             setPlay.call(this);
         }
 
@@ -186,25 +189,7 @@ export default class Audioplayer {
 
         let currentLeft = event.clientX - this.progressBar.getBoundingClientRect().left;
     
-        if (currentLeft < 0) {
-            currentLeft = 0;
-        }
-
-        const rightEdge = this.progressBar.offsetWidth - this.slider.offsetWidth;
-
-        if (currentLeft > rightEdge) {
-            currentLeft = rightEdge;
-        }
-
-        this.slider.style.left = currentLeft + 'px';    
-        this.progress.style.width = currentLeft + 'px';
-
-        if (currentLeft == rightEdge) {
-            this.progress.style.width = currentLeft + this.slider.offsetWidth + 'px';
-        }
-
-        this.audio.currentTime = currentLeft / (this.progressBar.offsetWidth / this.audio.duration);
-
+        this.setCurrentSliderAndProgress(currentLeft);
         this.timeUpdate();
         this.pointerDown(event);
     }
