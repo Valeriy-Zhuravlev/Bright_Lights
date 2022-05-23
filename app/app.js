@@ -3,6 +3,11 @@ import Audioplayer from './audioplayer.js';
 const audioplayer1 = new Audioplayer(document.querySelector('#player1'));
 const audioplayer2 = new Audioplayer(document.querySelector('#player2'));
 
+window.audioplayer1 = audioplayer1;
+
+audioplayer1.audio.src = audioplayer1.tracks[1].path;
+audioplayer2.audio.src = audioplayer2.tracks[0].path;
+
 //  ============================================================================
 
 audioplayer1.playBtn.addEventListener('pointerdown', function(event) {
